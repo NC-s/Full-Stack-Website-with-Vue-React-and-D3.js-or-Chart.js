@@ -7,12 +7,12 @@
       :options="chartOptions"
       class="mt-4 h-64"
     />
-    <p v-else class="mt-4 text-sm text-slate-400">Waiting for telemetry feed…</p>
+    <p v-else class="mt-4 text-sm text-slate-400">Waiting for telemetry feed...</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, watchEffect } from 'vue';
+import { computed } from 'vue';
 import { Line } from 'vue-chartjs';
 import {
   Chart as ChartJS,
@@ -22,10 +22,11 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Filler
+  Filler,
+  Legend
 } from 'chart.js';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend);
 
 const props = defineProps<{
   labels: string[];
@@ -92,6 +93,4 @@ const chartOptions = {
     }
   }
 };
-
-watchEffect(() => props.values);
 </script>

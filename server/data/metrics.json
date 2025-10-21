@@ -1,29 +1,97 @@
 {
-  "timestamp": "2024-01-08T12:00:00Z",
+  "timestamp": "2025-10-21T14:59:13.353321+00:00",
   "summary": {
-    "uptime": "99.99%",
-    "latencyP99": 12,
-    "ordersPerSecond": 1850,
-    "errorRate": 0.04
+    "uptime": "99.966%",
+    "latencyP99": 12.37,
+    "ordersPerSecond": 9086,
+    "errorRate": 0.02
   },
   "latencySeries": [
-    { "time": "11:20", "value": 15 },
-    { "time": "11:25", "value": 12 },
-    { "time": "11:30", "value": 13 },
-    { "time": "11:35", "value": 10 },
-    { "time": "11:40", "value": 11 },
-    { "time": "11:45", "value": 9 },
-    { "time": "11:50", "value": 10 },
-    { "time": "11:55", "value": 12 }
+    {
+      "time": "14:04",
+      "value": 12.88
+    },
+    {
+      "time": "14:09",
+      "value": 12.13
+    },
+    {
+      "time": "14:14",
+      "value": 15.13
+    },
+    {
+      "time": "14:19",
+      "value": 14.0
+    },
+    {
+      "time": "14:24",
+      "value": 10.19
+    },
+    {
+      "time": "14:29",
+      "value": 12.16
+    },
+    {
+      "time": "14:34",
+      "value": 14.23
+    },
+    {
+      "time": "14:39",
+      "value": 11.74
+    },
+    {
+      "time": "14:44",
+      "value": 13.68
+    },
+    {
+      "time": "14:49",
+      "value": 12.37
+    },
+    {
+      "time": "14:54",
+      "value": 12.67
+    },
+    {
+      "time": "14:59",
+      "value": 12.37
+    }
   ],
   "systems": [
-    { "name": "Order Gateway", "status": "green", "latencyMs": 9, "messagesPerSec": 2400 },
-    { "name": "Market Data", "status": "green", "latencyMs": 12, "messagesPerSec": 4200 },
-    { "name": "Risk Engine", "status": "amber", "latencyMs": 18, "messagesPerSec": 1600 },
-    { "name": "Research API", "status": "green", "latencyMs": 14, "messagesPerSec": 980 }
+    {
+      "name": "Order Gateway",
+      "status": "amber",
+      "latencyMs": 12.9,
+      "messagesPerSec": 2323
+    },
+    {
+      "name": "Market Data",
+      "status": "green",
+      "latencyMs": 10.75,
+      "messagesPerSec": 3934
+    },
+    {
+      "name": "Risk Engine",
+      "status": "amber",
+      "latencyMs": 24.42,
+      "messagesPerSec": 1674
+    },
+    {
+      "name": "Research API",
+      "status": "green",
+      "latencyMs": 15.84,
+      "messagesPerSec": 1155
+    }
   ],
   "alerts": [
-    { "title": "Risk engine queue depth elevated", "severity": "medium", "action": "Scaling async workers + notifying desk" },
-    { "title": "Market data burst detected", "severity": "low", "action": "Auto-throttling UI updates to 120fps" }
+    {
+      "title": "Market data burst detected",
+      "severity": "medium",
+      "action": "Auto-throttling UI updates to 120fps"
+    },
+    {
+      "title": "Risk engine queue depth elevated",
+      "severity": "low",
+      "action": "Scaling async workers + notifying desk"
+    }
   ]
 }

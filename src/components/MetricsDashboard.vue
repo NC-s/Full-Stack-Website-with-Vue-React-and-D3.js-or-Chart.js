@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <section class="rounded-3xl border border-sky-400/30 bg-night/70 p-10 shadow-xl">
     <div class="flex flex-wrap items-center justify-between gap-6">
       <div>
@@ -24,7 +24,7 @@
       <div class="space-y-4">
         <article class="rounded-2xl border border-slate-500/40 bg-slate-500/10 p-5" aria-labelledby="summary-heading">
           <h3 id="summary-heading" class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-300">Current posture</h3>
-          <div v-if="loading" class="mt-4 text-sm text-slate-400">Synchronising metrics…</div>
+          <div v-if="loading" class="mt-4 text-sm text-slate-400">Synchronising metrics...</div>
           <dl v-else class="mt-4 grid grid-cols-2 gap-4 text-slate-100">
             <div v-for="item in summaryMetrics" :key="item.label" class="rounded-xl bg-night/80 p-4">
               <dt class="text-xs uppercase tracking-wide text-slate-400">{{ item.label }}</dt>
@@ -91,22 +91,22 @@ const chartValues = computed(() => latencySeries.value.map((point) => point.valu
 const summaryMetrics = computed(() => [
   {
     label: 'Platform uptime',
-    value: summary.value?.uptime ?? '—',
+    value: summary.value?.uptime ?? 'N/A',
     emphasis: 'text-emerald-200'
   },
   {
     label: 'P99 latency',
-    value: summary.value ? `${summary.value.latencyP99} ms` : '—',
+    value: summary.value ? `${summary.value.latencyP99} ms` : 'N/A',
     emphasis: summary.value && summary.value.latencyP99 < 15 ? 'text-sky-200' : 'text-amber-200'
   },
   {
     label: 'Orders / second',
-    value: summary.value ? summary.value.ordersPerSecond.toLocaleString() : '—',
+    value: summary.value ? summary.value.ordersPerSecond.toLocaleString() : 'N/A',
     emphasis: 'text-lime-200'
   },
   {
     label: 'Error budget used',
-    value: summary.value ? `${summary.value.errorRate.toFixed(2)} %` : '—',
+    value: summary.value ? `${summary.value.errorRate.toFixed(2)} %` : 'N/A',
     emphasis: 'text-rose-200'
   }
 ]);
