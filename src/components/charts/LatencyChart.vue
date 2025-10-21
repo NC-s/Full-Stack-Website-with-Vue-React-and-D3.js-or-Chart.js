@@ -1,13 +1,18 @@
 <template>
   <div>
     <h3 class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-100">Latency distribution</h3>
-    <Line
-      v-if="chartData.datasets[0].data.length"
-      :data="chartData"
-      :options="chartOptions"
-      class="mt-4 h-64"
-    />
-    <p v-else class="mt-4 text-sm text-slate-400">Waiting for telemetry feed...</p>
+    <div class="mt-4 h-64">
+      <Line
+        v-if="hasData"
+        :data="chartData"
+        :options="chartOptions"
+        :height="256"
+        class="h-full"
+      />
+      <p v-else class="flex h-full items-center justify-center text-sm text-slate-400">
+        Waiting for telemetry feed...
+      </p>
+    </div>
   </div>
 </template>
 
@@ -32,6 +37,8 @@ const props = defineProps<{
   labels: string[];
   values: number[];
 }>();
+
+const hasData = computed(() => props.values.length > 0);
 
 const chartData = computed(() => ({
   labels: props.labels,
