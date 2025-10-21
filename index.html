@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-End Engineer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Real-Time Front-End Engineer</p>
+        <h1>
+          Building intuitive monitoring platforms for quantitative trading teams
+        </h1>
+        <p class="hero__subtitle">
+          I design and ship responsive, data-rich interfaces that transform
+          high-velocity market telemetry into actionable intelligence.
+        </p>
+        <a class="hero__cta" href="#contact">Let’s collaborate</a>
+      </div>
+      <div class="hero__metrics">
+        <div class="metric">
+          <span class="metric__value">5<span class="metric__suffix">ms</span></span>
+          <span class="metric__label">Telemetry latency</span>
+        </div>
+        <div class="metric">
+          <span class="metric__value">150K</span>
+          <span class="metric__label">Events/min rendered</span>
+        </div>
+        <div class="metric">
+          <span class="metric__value">24/7</span>
+          <span class="metric__label">Uptime monitoring</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="strengths">
+        <h2 class="section__title">What I bring to the desk</h2>
+        <div class="grid grid--two">
+          <article class="card">
+            <h3>Real-time visualization expertise</h3>
+            <p>
+              Architected monitoring consoles that ingest WebSocket feeds and
+              visualize order flow using Chart.js, D3.js, and custom canvas
+              renderers. Optimized for 60fps rendering across multiple monitors.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Performance-focused UX</h3>
+            <p>
+              Built low-latency, keyboard-first workflows that empower traders to
+              investigate anomalies in seconds. Leveraged React/Vue, suspense,
+              virtualization, and memoization for high throughput.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Collaborative delivery</h3>
+            <p>
+              Partnered with researchers, quants, and SREs to iterate on insights,
+              synthesize requirements, and land features rapidly in production.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Full-stack empathy</h3>
+            <p>
+              Integrated Node.js/Python services, tuned Redis-backed caches, and
+              instrumented APIs to ensure cohesive, observable front-to-back
+              solutions.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="skills">
+        <div class="section__header">
+          <h2 class="section__title">Core toolkit</h2>
+          <p class="section__subtitle">
+            A selection of technologies and practices used to build resilient,
+            data-intensive products.
+          </p>
+        </div>
+        <div class="skills">
+          <div class="skills__group">
+            <h3>Languages &amp; Frameworks</h3>
+            <ul>
+              <li>TypeScript / Modern JavaScript</li>
+              <li>React 18, Vue 3, SvelteKit</li>
+              <li>Node.js (Express, Fastify), Python (FastAPI, Flask)</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3>Real-time &amp; Visualization</h3>
+            <ul>
+              <li>WebSockets, Server-Sent Events, Kafka consumers</li>
+              <li>D3.js, Chart.js, TradingView Charting Library</li>
+              <li>Canvas/WebGL rendering pipelines</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3>Operations &amp; Quality</h3>
+            <ul>
+              <li>Automated testing (Vitest, Jest, Playwright)</li>
+              <li>CI/CD (GitHub Actions, Jenkins)</li>
+              <li>Observability (Grafana, OpenTelemetry, Datadog)</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3>Collaboration</h3>
+            <ul>
+              <li>Product discovery with traders &amp; researchers</li>
+              <li>Design systems &amp; accessibility audits (WCAG 2.2)</li>
+              <li>Lean/Agile delivery, rapid prototyping</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section__header">
+          <h2 class="section__title">Highlighted impact</h2>
+          <p class="section__subtitle">
+            Selected projects that demonstrate the intersection of data, design,
+            and engineering rigor.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__bullet"></div>
+            <h3>Multi-venue Latency Radar</h3>
+            <p>
+              Designed an ops dashboard that correlates exchange gateway metrics
+              with strategy P&amp;L in real time. Implemented streaming chart tiles
+              using React, Suspense, and Chart.js. Cut incident response time by
+              40%.
+            </p>
+            <span class="timeline__meta">React · Chart.js · WebSockets · Grafana</span>
+          </article>
+          <article class="timeline__item">
+            <div class="timeline__bullet"></div>
+            <h3>Strategy Experiment Workbench</h3>
+            <p>
+              Shipped a Vue-based platform for researchers to launch experiments,
+              monitor backtests, and annotate anomalies collaboratively.
+            </p>
+            <span class="timeline__meta">Vue 3 · Pinia · FastAPI · PostgreSQL</span>
+          </article>
+          <article class="timeline__item">
+            <div class="timeline__bullet"></div>
+            <h3>Global Market Health Console</h3>
+            <p>
+              Delivered a SvelteKit app with WebGL heatmaps to visualize order
+              book depth across regions. Integrated with Python microservices and
+              Kafka pipelines for resilient delivery.
+            </p>
+            <span class="timeline__meta">SvelteKit · WebGL · Kafka · Python</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="realtime">
+        <div class="section__header">
+          <h2 class="section__title">Live system pulse</h2>
+          <p class="section__subtitle">
+            A simulated event stream showcases my approach to crafting
+            high-fidelity, performant monitoring components.
+          </p>
+        </div>
+        <div class="pulse">
+          <canvas id="latencyChart" aria-label="Latency trend" role="img"></canvas>
+          <div class="pulse__details">
+            <div class="pulse__stat">
+              <span class="pulse__label">Current Latency</span>
+              <span class="pulse__value" id="currentLatency">—</span>
+            </div>
+            <div class="pulse__stat">
+              <span class="pulse__label">Max Latency (5m)</span>
+              <span class="pulse__value" id="maxLatency">—</span>
+            </div>
+            <div class="pulse__stat">
+              <span class="pulse__label">Events Processed</span>
+              <span class="pulse__value" id="eventCount">0</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="section__header">
+          <h2 class="section__title">Delivery DNA</h2>
+          <p class="section__subtitle">
+            Accelerating outcomes without compromising quality.
+          </p>
+        </div>
+        <div class="grid grid--three">
+          <article class="card card--process">
+            <h3>1. Discover</h3>
+            <p>
+              Embed with quants and traders to map workflows, capture metrics,
+              and align on the signals that matter most to the desk.
+            </p>
+          </article>
+          <article class="card card--process">
+            <h3>2. Prototype</h3>
+            <p>
+              Iterate on high-fidelity prototypes using real data in secured
+              sandboxes. Validate performance budgets early.
+            </p>
+          </article>
+          <article class="card card--process">
+            <h3>3. Harden</h3>
+            <p>
+              Productionize with telemetry, automated tests, and runbooks.
+              Deliver resilient, observable systems that scale with the firm.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="contact">
+        <div class="section__header">
+          <h2 class="section__title">Let’s build together</h2>
+          <p class="section__subtitle">
+            Ready to craft the next generation of trading intelligence tools.
+          </p>
+        </div>
+        <form class="contact" action="#" method="post">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@firm.com" required />
+          </label>
+          <label>
+            How can I help?
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Describe the monitoring or visualization challenges you want to tackle"
+              required
+            ></textarea>
+          </label>
+          <button type="submit">Send message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Built with performance, clarity, and collaboration at its core.
+      </p>
+      <nav>
+        <a href="#strengths">Strengths</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Impact</a>
+        <a href="#realtime">Live Pulse</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+  </body>
+</html>
